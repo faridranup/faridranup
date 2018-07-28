@@ -1,5 +1,5 @@
 from tornado import websocket, web, ioloop
-import json
+import read
 
 cl = []
 
@@ -27,7 +27,7 @@ class ApiHandler(web.RequestHandler):
         id = self.get_argument("id")
         value = self.get_argument("value")
         data = {"id": id, "value" : value}
-        data = json.dumps(data)
+        data = read.dumps(data)
         for c in cl:
             c.write_message(data)
 
