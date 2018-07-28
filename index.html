@@ -85,7 +85,7 @@
   </div>
   <script>
     var host = window.location.host;
-    var ws = new WebSocket('ws://192.168.1.99:8888/ws');
+    var ws = new WebSocket('ws://http://localhost:8888/ws');
     var $message = $('#message');
     ws.onopen = function(){
       $message.attr("class", 'label label-success');
