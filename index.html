@@ -96,15 +96,15 @@
       $message.hide();
       $message.fadeIn("slow");
       $message.text('recieved message');
-      var json = JSON.parse(ev.data);
-      $('#' + json.id).hide();
-      $('#' + json.id).fadeIn("slow");
-      $('#' + json.id).text(json.value);
-      var $rowid = $('#row' + json.id);
-      if(json.value > 500){
+      var read = READ.parse(ev.data);
+      $('#' + read.id).hide();
+      $('#' + read.id).fadeIn("slow");
+      $('#' + read.id).text(read.value);
+      var $rowid = $('#row' + read.id);
+      if(read.value > 500){
         $rowid.attr("class", "error");
       }
-      else if(json.value > 200){
+      else if(read.value > 200){
         $rowid.attr("class", "warning");
       }
       else{
