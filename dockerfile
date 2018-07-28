@@ -10,4 +10,4 @@ RUN cd /tmp \
 
 EXPOSE 8888
 
-CMD ["python", "/tmp/tornado-websocket-example/app.py"]
+CMD ["python", "/tmp/tornado_websocket/app.py"]
